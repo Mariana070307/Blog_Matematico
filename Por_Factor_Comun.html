@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+        body {
+            font-family: Georgia, Arial;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 10px;
+            color: #222;
+        }
+        header {
+            border-bottom: 2px solid #1a5276;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .volver {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2 {
+            font-family: Times New Roman;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 10px;
+            color: #222;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #090606;
+            padding: 8px;
+            text-align: left;
+            cursor: pointer;
+            width: 25%
+        }
+        th {
+            background-color: #588157;
+            color: #fff5bd;
+        }
+    </style>
+    </head>
+    </headhe>
+    <header>
+        <a href="entrada.html?id=Factorización" class="volver">← Ir atrás</a>
+    </header>
+
+    <h1>Factorización por Factor Común</h1>
+    <section>
+    <h2>Definición</h2>
+    <p>Este método se caracteriza por buscar a los factores comunes, osea, a los que estan repetidos dentro de la expresión.</p>
+    <h3>Representación:</h3>
+    <ul>
+        <li>ab + ac = a(b + c)</li>
+        <li>ab + ac + ad = a(b+ c + d)</li>
+    </ul>
+
+    <h3>Pasos para resolver:</h3>
+    <ol>
+        <li>Identificar el MCD de los coeficientes.</li>
+        <li>Identifica las letras comunes y con menor exponente.</li>
+        <li>Escribir el factor común del paréntesis.</li>
+        <li>Dividir cada término entre el factor común.</li>
+    </ol>
+
+    <h4>Ejemplo: 12x<sup>3</sup>y<sup>2</sup> + 18x<sup>2</sup>y<sup>3</sup> - 24x<sup>2</sup>y </h4>
+    <ol>
+        <li>Su MCD es 6.</li>
+        <li>El menor exponente de x es 2 y el de y es 2.</li>
+        <li>Por lo que el factor común es 6x<sup>2</sup>y<sup>2</sup>.</li>
+        <li>Se divide cada término entre el factor común.</li>
+    </ol>
+    
+    <table>
+        <tr>
+            <th>
+                Término
+            </th>
+            <th>
+                División
+            </th>
+            <th>
+                Resultado
+            </th>
+        </tr>
+        <tr>
+            <td>
+                12x<sup>3</sup>y<sup>2</sup>
+            </td>
+            <td>
+                 12x<sup>3</sup>y<sup>2</sup> ÷ 6x<sup>2</sup>y<sup>2</sup>
+            </td>
+            <td>
+                2xy
+            </td>
+        </tr>
+        <tr>
+            <td>
+                18x<sup>2</sup>y<sup>3</sup>
+            </td>
+            <td>
+                18x<sup>2</sup>y<sup>3</sup> ÷ 6x<sup>2</sup>y<sup>2</sup>
+            </td>
+            <td>
+                3y
+            </td>
+        </tr>
+        <tr>
+            <td>
+                -24x<sup>2</sup>y
+            </td>
+            <td>
+                -24x<sup>2</sup>y ÷ 6x<sup>2</sup>y<sup>2</sup>
+            </td>
+            <td>
+                -4/y
+            </td>
+        </tr>
+    </table>
+    <p>Se obtiene el resultado: 6x<sup>2</sup>y<sup>2</sup>(2xy + 3y - 4/y)</p>
+    <p>Comprobación:</p>
+    <table>
+        <tr>
+            <th>
+                Término
+            </th>
+            <th>
+                Multiplicación
+            </th>
+            <th>
+                Resultado
+            </th>
+        </tr>
+        <tr>
+            <td>
+                6x<sup>2</sup>y<sup>2</sup>(2xy)
+            </td>
+            <td>
+                 6x<sup>2</sup>y<sup>2</sup> * 2xy
+            </td>
+            <td>
+                12x<sup>3</sup>y<sup>3</sup>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6x<sup>2</sup>y<sup>2</sup>(3y)
+            </td>
+            <td>
+                6x<sup>2</sup>y<sup>2</sup> * 3y
+            </td>
+            <td>
+                18x<sup>2</sup>y<sup>3</sup>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6x<sup>2</sup>y<sup>2</sup>(-4/y)
+            </td>
+            <td>
+                6x<sup>2</sup>y<sup>2</sup> * -4/y
+            </td>
+            <td>
+                -24x<sup>2</sup>y
+            </td>
+        </tr>
+    </table>    
+</section>
