@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--Estilo de la pagina y de cada seccion dentro-->
+<style>
+     body {
+            font-family: Georgia, "Palatino Linotype", Garamond;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 10px;
+            color: #222;
+    }
+    h1 {
+            color: #1a5276;
+            cursor: pointer;
+            border-bottom: 2px solid #1a5276;
+            padding-bottom: 5px;
+        }
+    p {
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 4px;
+    }
+    table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+    }
+    th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+            cursor: pointer;
+    }
+    th {
+            background-color: #588157;
+            color: #fff5bd;
+    }
+    ul, ol {
+            background-color: #fafafa;
+            padding: 15px 30px;
+            border: 1px solid #ddd;
+    }
+    li {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 4px;
+    }
+    #Lista-Entradas {
+        list-style-type: none;
+    }
+    #lista-entradas li {
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #lista-entradas li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #lista-entradas a {
+            color: #1a5276;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #lista-entradas a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .fecha-post {
+            display: inline-block;
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-left: 8px;
+        }
+
+        .resumen-post {
+            margin: 8px 0 0 0;
+            background-color: transparent;
+            padding: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Clases auxiliares para elementos interactivos */
+        ul.interactivo {
+            background-color: #fafafa;
+            padding: 15px 30px;
+            border: 1px solid #ddd;
+        }
+
+        ul.interactivo li {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+
+    .oculto {
+        display: none;
+    }
+    .resaltado {
+        background-color: #7D9FC0;
+        color: #000000;
+    }
+    .cambio-color {
+        color: #c0392b;
+    }
+</style>
+</head>
+
+<body>
+<!--Titulo del blog-->
+    <h1 id="titulo" onclick = "cambiarColorTitulo()">Blog Matemático Interactivo</h1>
+
+    <!--Subtitulo del blog-->
+    <h2 class="subtitulo">Zona de aprendizaje</h2>
+    
+    <ul id="lista-entradas"></ul>
+
+    <h2 class="subtitulo">Recursos y Conceptos Básicos</h2>
+
+    
+<!--principales conceptos-->
+    <p onclick="alternarLista('conceptos')" style="cursor: pointer;">
+        Conceptos Básicos
+    </p>
+<!--tabla.1-->
+    <ul id="conceptos">
+        <li onclick="resaltarElemento(this)">Álgebra: Emplea letras, números y símbolos para expresar
+            relaciones y resolver problemas.</li>
+        <li onclick="resaltarElemento(this)">Geometría: Estudia las formas, tamaños, posiciones
+             y propiedades de las figuras en el espacio.</li>
+        <li onclick="resaltarElemento(this)">Cálculo: Estudia el cambio, el movimiento y las 
+            variaciones de las cantidades mediante funciones y operaciones.</li>
+        <li onclick="resaltarElemento(this)">Estadística: Recopila, organiza, analiza e interpreta 
+            datos para obtener información y tomar decisiones.</li>
+    </ul>
+    
+    <script src="posts.js"></script>
+
+    <script>
+        // Cargar dinámicamente las entradas definidas en posts.js
+        const contenedorLista = document.getElementById('lista-entradas');
+
+        if (typeof publicaciones !== 'undefined' && publicaciones.length > 0) {
+            publicaciones.forEach(post => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <a href="entrada.html?id=${post.id}">${post.titulo}</a>
+                    <span class="fecha-post">${post.fecha}</span>
+                    <p class="resumen-post">${post.resumen}</p>
+                `;
+                contenedorLista.appendChild(li);
+            });
+        } else {
+            contenedorLista.innerHTML = '<li>No hay entradas publicadas aún.</li>';
+        }
+
+        // Funciones de interacción rápida
+        function cambiarColorTitulo() {
+            var titulo = document.getElementById('titulo');
+            titulo.classList.toggle('cambio-color');
+        }
+
+        function alternarLista(id) {
+            var lista = document.getElementById(id);
+            lista.classList.toggle('oculto');
+        }
+
+        function resaltarElemento(elemento) {
+            elemento.classList.toggle('resaltado');
+        }
+    </script>
+
+<!--Formulas-->
+    <p>Tabla de Fórmulas </p>
+<!--tabla de formulas-->    
+    <table>
+        <tr>
+            <th>Tema</th>
+            <th>Fórmula</th>
+        </tr>
+        <tr>
+            <td onclick="resaltarElemento(this)">Área del triángulo</td>
+            <td onclick="resaltarElemento(this)">Base por altura dividido entre 2</td>
+        </tr>
+        <tr>
+            <td onclick="resaltarElemento(this)">Teorema de Pitágoras</td>
+            <td onclick="resaltarElemento(this)">a elevado al cuadrado más b elevado al cuadrado igual a c elevado al cuadrado</td>
+        </tr>
+        <tr>
+            <td onclick="resaltarElemento(this)">Perímetro del círculo</td>
+            <td onclick="resaltarElemento(this)">2 por Pi por radio</td>
+        </tr>
+    </table>    
+<!--Ejercicio-->
+    <p onclick="alternarLista('pasos')">
+        Pasos para resolver un problema 
+<!--Lista de pasos-->
+    <ol id="pasos">
+        <li onclick="resaltarElemento(this)">Comprender el problema planteado.</li>
+        <li onclick="resaltarElemento(this)">Trazar un plan o seleccionar la fórmula.</li>
+        <li onclick="resaltarElemento(this)">Ejecutar las operaciones requeridas.</li>
+        <li onclick="resaltarElemento(this)">Revisar y verificar la solución.</li>
+    </ol>
+<!--funciones-->
+    <script>
+        function cambiarColorTitulo() {
+            var titulo = document.getElementById('titulo');
+            titulo.classList.toggle('cambio-color');
+        }
+        function alternarLista(id) {
+            var lista = document.getElementById(id);
+            lista.classList.toggle('oculto');
+        }
+        function resaltarElemento(elemento) {
+            elemento.classList.toggle('resaltado');
+        }
+    </script>
+
+    <script>
+        const  titulo= document.getElementById('titulo');
+        titulo.addEventListener("click", () => {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+            titulo.style.color = randomColor;
+        });
+    </script>
+</body>
