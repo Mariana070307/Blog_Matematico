@@ -41,5 +41,12 @@ const publicaciones = [
     fecha: "2026-10-17",
     resumen: "Definición de que es la factorización con ejercicios."
   }
+  ,{
+    id: "Ecuaciones de primer grado",
+    titulo: "Ecuaciones de primer grado",
+    archivo: "Entradas/Ecuaciones_Primer_Grado.js",
+    fecha: "2026-10-29",
+    resumen: "Definición y resolución de ecuaciones de primer grado."
+  }
 ];
 // Poner siempre una coma despues de las llaves sino se rompe el código.
