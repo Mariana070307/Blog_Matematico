@@ -34,7 +34,7 @@ const publicaciones = [
     fecha: "2026-10-17",
     resumen: "Definición de que es la factorización con ejercicios."
   }
-  {
+  ,{
     id: "Factorización II",
     titulo: "Factorización",
     archivo: "Entradas/Factorizacion.js",
@@ -42,3 +42,4 @@ const publicaciones = [
     resumen: "Definición de que es la factorización con ejercicios."
   }
 ];
+// Poner siempre una coma despues de las llaves sino se rompe el código.
