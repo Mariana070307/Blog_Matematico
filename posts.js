@@ -36,8 +36,8 @@ const publicaciones = [
   }
   ,{
     id: "Factorización II",
-    titulo: "Factorización",
-    archivo: "Entradas/Factorizacion.js",
+    titulo: "Factorización II",
+    archivo: "Entradas/Factorizacion_II.js",
     fecha: "2026-10-17",
     resumen: "Definición de que es la factorización con ejercicios."
   }
