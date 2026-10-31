@@ -8,7 +8,7 @@
 <!--Estilo de la pagina y de cada seccion dentro-->
 <style>
      body {
-            font-family: Georgia, "Palatino Linotype", Garamond;
+            font-family: Georgia, "Palatino Linotype", Garamond, serif;
             max-width: 700px;
             margin: 20px auto;
             padding: 10px;
@@ -52,7 +52,7 @@
             cursor: pointer;
             padding: 4px;
     }
-    #Lista-Entradas {
+    #lista-entradas {
         list-style-type: none;
     }
     #lista-entradas li {
@@ -125,7 +125,7 @@
 
 <body>
 <!--Titulo del blog-->
-    <h1 id="titulo" onclick = "cambiarColorTitulo()">Blog Matemático Interactivo</h1>
+    <h1 id="titulo">Blog Matemático Interactivo</h1>
 
     <!--Subtitulo del blog-->
     <h2 class="subtitulo">Zona de aprendizaje</h2>
@@ -209,8 +209,7 @@
         </tr>
     </table>    
 <!--Ejercicio-->
-    <p onclick="alternarLista('pasos')">
-        Pasos para resolver un problema 
+    <p onclick="alternarLista('pasos')"> Pasos para resolver un problema </p>
 <!--Lista de pasos-->
     <ol id="pasos">
         <li onclick="resaltarElemento(this)">Comprender el problema planteado.</li>
@@ -220,19 +219,14 @@
     </ol>
 <!--funciones-->
     <script>
-        function cambiarColorTitulo() {
-            var titulo = document.getElementById('titulo');
-            titulo.classList.toggle('cambio-color');
-        }
         function alternarLista(id) {
-            var lista = document.getElementById(id);
-            lista.classList.toggle('oculto');
+            document.getElementById(id). classList.toggle('oculto');
         }
         function resaltarElemento(elemento) {
             elemento.classList.toggle('resaltado');
         }
     </script>
-
+// Cambio de color del titulo al hacer click
     <script>
         const  titulo= document.getElementById('titulo');
         titulo.addEventListener("click", () => {
@@ -241,3 +235,4 @@
         });
     </script>
 </body>
+</html>
