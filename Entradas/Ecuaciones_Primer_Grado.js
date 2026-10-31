@@ -133,7 +133,7 @@ contenidoEntrada = `
     <h3>Paso 5. Validación contra el enunciado</h3>
     <ul>
         <li>7 corridas × 4 min = 28 min</li>
-        <li>28 min + 3 min de configuración = 31 min ✔</li>
+        <li>28 min + 3 min de configuración = 31 min </li>
         <li>7 es un entero positivo, tiene sentido porque no se puede correr 2.5 veces.</li>
     </ul>
     <p>Respuesta: corrió la suite 7 veces.</p>
